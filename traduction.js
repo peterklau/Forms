@@ -13,34 +13,34 @@ function redirectToLanguage() {
 
     // Ajoutez autant de cas que nécessaire pour chaque langue
     switch (browserLanguage) {
-        case 'de':
-            console.log('Redirection vers de.html');
-            redirectToPage('/Forms/de.html');
-            break;
         case 'fr':
             console.log('Redirection vers index.html');
-            redirectToPage('/Forms/index.html');
+            redirectToPage('index.html');
+            break;
+        case 'de':
+            console.log('Redirection vers de.html');
+            redirectToPage('de.html');
             break;
         case 'en':
             console.log('Redirection vers en.html');
-            redirectToPage('/Forms/en.html');
+            redirectToPage('en.html');
             break;
         case 'es':
             console.log('Redirection vers es.html');
-            redirectToPage('/Forms/es.html');
+            redirectToPage('es.html');
             break;
         case 'pt':
             console.log('Redirection vers pt.html');
-            redirectToPage('/Forms/pt.html');
+            redirectToPage('pt.html');
             break;
         case 'it':
             console.log('Redirection vers it.html');
-            redirectToPage('/Forms/it.html');
+            redirectToPage('it.html');
             break;
         default:
             console.log('Redirection par défaut vers en.html');
             // Redirection par défaut, par exemple, vers la version anglaise
-            redirectToPage('/Forms/en.html');
+            redirectToPage('en.html');
     }
 }
 
@@ -51,9 +51,9 @@ function redirectToPage(targetPage) {
     console.log('Page actuelle:', currentPage);
 
     // Vérifier si la redirection est nécessaire
-    if (currentPage !== '/' + targetPage) {
+    if (currentPage !== '/Forms/' + targetPage) {
         console.log('Redirection vers:', targetPage);
-        window.location.href = targetPage;
+        window.location.href = '/Forms/' + targetPage;
     }
 }
 
