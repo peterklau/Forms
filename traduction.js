@@ -15,32 +15,32 @@ function redirectToLanguage() {
     switch (browserLanguage) {
         case 'de':
             console.log('Redirection vers de.html');
-            redirectToPage('de.html');
+            redirectToPage('/Forms/de.html');
             break;
         case 'fr':
             console.log('Redirection vers index.html');
-            redirectToPage('index.html');
+            redirectToPage('/Forms/index.html');
             break;
         case 'en':
             console.log('Redirection vers en.html');
-            redirectToPage('en.html');
+            redirectToPage('/Forms/en.html');
             break;
         case 'es':
             console.log('Redirection vers es.html');
-            redirectToPage('es.html');
+            redirectToPage('/Forms/es.html');
             break;
         case 'pt':
             console.log('Redirection vers pt.html');
-            redirectToPage('pt.html');
+            redirectToPage('/Forms/pt.html');
             break;
         case 'it':
             console.log('Redirection vers it.html');
-            redirectToPage('it.html');
+            redirectToPage('/Forms/it.html');
             break;
         default:
             console.log('Redirection par défaut vers en.html');
             // Redirection par défaut, par exemple, vers la version anglaise
-            redirectToPage('en.html');
+            redirectToPage('/Forms/en.html');
     }
 }
 
