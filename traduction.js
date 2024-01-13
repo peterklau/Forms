@@ -1,13 +1,14 @@
 // translation.js
 
-// Fonction pour obtenir la langue du navigateur
-function getBrowserLanguage() {
-    return navigator.language || navigator.userLanguage;
+// Fonction pour obtenir les deux premières lettres de la langue du navigateur
+function getShortBrowserLanguage() {
+    var browserLanguage = (navigator.language || navigator.userLanguage).toLowerCase();
+    return browserLanguage.substring(0, 2);
 }
 
 // Fonction pour rediriger l'utilisateur en fonction de la langue
 function redirectToLanguage() {
-    var browserLanguage = getBrowserLanguage().toLowerCase();
+    var browserLanguage = getShortBrowserLanguage();
     
     console.log('Langue du navigateur détectée:', browserLanguage);
 
